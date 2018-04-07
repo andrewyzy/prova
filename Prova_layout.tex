@@ -1,0 +1,219 @@
+\documentclass[12pt]{exam}
+%=========================================================
+%------------PACOTES
+%=========================================================
+\usepackage[T1]{fontenc}%Codificação
+\usepackage[utf8]{inputenc}%Inclui palavras com acento
+\usepackage[brazil]{babel} %Traduz para o português
+\usepackage[top=2cm,left=1cm,right=1.5cm,bottom=2cm]{geometry}%margens
+\usepackage{amsmath,amssymb}%Expressoes matemáticas e símbolos
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\usepackage{multicol}% Múltiplas colunas
+\usepackage{multirow}% permite mesclar células de modo horizontal
+\usepackage{array}%para tabelas
+\usepackage{ragged2e}%alinhamento
+\usepackage{graphicx}%Para inserir imagens
+\usepackage{pdflscape}%Permite mudar a orientacao da pagina
+\usepackage{epstopdf} %converte figs eps em figs pdf
+\usepackage{booktabs}%tabelas
+\usepackage{pdfpages}%Permite incluir arquivos pdf
+\usepackage[sort&compress,square,comma, authoryear]{natbib}%Referencias
+\usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=blue,bookmarks=true]{hyperref}%Links e citações
+\usepackage{enumerate}%enumeracao
+\usepackage{enumitem}%enumeracao
+%---Definição de Itens e Subitens---
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+%---
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+\setlist[enumerate,1]{%(
+	leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+\newcommand{\dis}{\displaystyle}
+\renewcommand*\half{.5}
+\newcommand\answerbox{%%
+	\fbox{\rule{2in}{0pt}\rule[-0.1ex]{0pt}{4ex}}}
+\pointpoints{ponto}{pontos}
+\hqword{\textcolor{blue}{Questão:}}
+\hpword{Valor:}
+\hsword{Pontuação:}
+\htword{\textcolor{blue}{Total}}
+%=========================================================
+%------------DIGITE AQUI
+%=========================================================
+\newcommand{\universidade}{UCSAL}
+\newcommand{\curso}{ Bacharelado em Engenharia de Software}
+\newcommand{\disciplina}{Evolução de Software - 2018.1}
+\newcommand{\professor}{Antonio Carlos Severino}
+\newcommand{\data}{\today}
+\newcommand{\prova}{Prova da Primeira Unidade}
+\newcommand{\tempo}{120 Minutos}
+\newcommand{\aluno}{\bf Aluno:}
+\newcommand{\nota}{NOTA:}
+%=========================================================
+%------------Cabeçalho da Segunda 
+%=========================================================
+\pagestyle{headandfoot}%{head}%empty
+\firstpageheader{}{}{}
+\runningheader{\prova}{}{\data}
+\runningheadrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Boa Prova!}{Pag. \thepage\ de \numpages}
+\runningfootrule
+%========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+%-------------------Cabeçalho da Primeira Página
+%========================================================
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+%--------------------Orgão e Turma
+\includegraphics[scale=0.5]{logo-nova-ucsal.png}  & \textbf{Nota:} & {\answerbox}\\
+
+\textbf{Curso:} \textbf{\curso}\\
+
+\textbf{Disciplina:} \textbf{\disciplina}\\
+%-------------------Disciplina e Professor
+\textbf{Professor: \professor}  \\[8pt]
+%-------------------
+%\Large{\aluno\textbf{\hrulefill}}& {\bf Turma}:&\textbf{\hrulefill}
+\multicolumn{3}{l}{\Large{\aluno \textbf{\hrulefill}}}\\
+\end{tabular*}
+%--------------------LINHA CENTRAL
+\begin{center}
+\rule[1ex]{\textwidth}{1pt}
+{\LARGE{\prova}}\\
+Duração: \tempo \hspace{9cm}Data:\hspace{1cm}/\hspace{1cm}/\hspace{1cm}\\
+\rule[2ex]{\textwidth}{1pt}
+\end{center}
+%=========================================================
+%-------------------RECOMENDAÇÕES
+%=========================================================
+\noindent
+Esta prova contém \numpages\ página(s), incluindo esta capa, e \numquestions\ questões, formando um um total de \numpoints\ pontos.
+%=========================================================
+%-------------------Tabela de Pontuação
+%=========================================================
+\begin{center}
+\textbf{Tabela (para uso EXCLUSIVO do professor)}\\
+\addpoints
+\gradetable[h][questions]
+\end{center}
+	
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+%--------------------Linha Após a Tabela
+\begin{questions}
+
+
+%=========================================================
+%-------------------QUESTÕES DA PROVA
+%=========================================================
+
+\question[1] text text text text text text text text text text text text text \citep{ENEM(1998)}
+
+\begin{choices}
+
+\choice text text text text text text text text text text text text text text text 
+
+\choice text text text text text text text text text text text text text 
+
+\choice text text text text text text text text text text text text text text 
+
+\choice text text text text text text text text text text text text text text 
+
+\choice text text text text text text text text text text text text text text text text text text 
+
+\end{choices}
+
+
+\question[2] text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+
+\fillwithlines{1.8 in}
+
+
+\question[1] text text text text text text text text text text text text text text text text text text text text text text text text text 
+
+
+\fillwithlines{1 in}
+
+
+\question[2] text text text text text text text text text text text text text text text 
+
+(a) text text text text text : \fillwithlines{0.9 in}
+(b) text text text text text : \fillwithlines{0.9 in}
+(c) text text text text text : \fillwithlines{0.9 in}
+(d) text text text text text : \fillwithlines{0.9 in}
+
+
+\question[1] text text text text text text text text text text text text text text 
+
+\begin{choices}
+
+\choice text text text text text text text text text text text text text text 
+\choice text text text text text text text text text text text 
+\choice text text text text text text text text text text text text 
+\choice text text text text text text text text text text text 
+\choice text text text text text text text text text text text text v
+
+
+\end{choices}
+
+
+\question[2] text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text 
+
+\fillwithlines{1.9 in}
+
+\question[1] \textit{”text text text text text text text text text text text text text text text text text text ”}text text text text text text text text text text text text text text text text 
+
+\begin{choices}
+
+\choice text text text text text text text text text text text text
+\choice text text text text text text text text text text text text 
+\choice text text text text text text text text text text text text 
+\choice text text text text text text text text text text text text 
+\choice text text text text text text text text text text text text 
+
+\end{choices}
+
+
+
+\fillwithlines{1.9 in}
+
+
+%----------------------------------------------------------
+
+%=========================================================
+%-------------------FIM DA PROVA
+%=========================================================
+\end{questions}
+%===========================================================
+%          BIBLIOGRAFIA
+%===========================================================
+\begin{thebibliography}{99}
+\thispagestyle{empty}%myheadings
+%===========================================================
+\bibitem[Hazzan(1993)]{Hazzan(1993)}
+[1] {Hazzan, Samuel}.
+\emph{Combinatória e Probabilidade}.
+{Volume  5}, {1;ed}, {São Paulo}, {Atual}, {1993}.
+		
+\bibitem[Fuvest(2009)]{Fuvest(2009)}
+\textbf{Fuvest(2009)}
+(Fundação Universitária para o Vestibular).
+\emph{Provas}. 
+Disponível em:
+\url{http://acervo.fuvest.br/fuvest/}\\
+		
+\bibitem[ENEM(1998)]{ENEM(1998)}
+\textbf{ENEM 1998}
+(Exame Nacional do Ensino Médio).
+\emph{INEP-Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira}.{Ministério da Educação}. 
+Disponível em:
+\url{http://www.enem.inep.gov.br/}.
+		
+===========================================================
+\end{thebibliography}
+\end{document}
